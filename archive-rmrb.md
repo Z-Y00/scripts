@@ -6,8 +6,7 @@ So you may wanna to archive the daily paper and glance throungh them years later
 ```
 wget -r http://paper.people.com.cn/rmrb/ -A .pdf
 ```
-I need to deal with the 01-09 and 10-20 seperately, and
-the actual days in month and pages are smaller than what I've written here, just in case we miss any page
+The actual days in month and pages are smaller than what I've written here, just in case we miss any page
 ```
 for year in 2018 2019 
 do

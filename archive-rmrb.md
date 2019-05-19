@@ -13,34 +13,14 @@ for year in 2018 2019
 do
   for month in 01 02 03 04 05 06 07 08 09 10 11 12
    do
-        for day in 01 02 03 04 05 06 07 08 09
-       do
-         for page in 01 02 03 04 05 06 07 08 09
-           do
-            echo $year$month$day$page
-            wget paper.people.com.cn/rmrb/page/$year-$month/$day/$page/rmrb$year$month$day$page.pdf 
-          done
-          for ((page=10;page<=25;page++)) 
-           do
+        for day in 0{1..9} {10..31} ; do
+         for page in  0{1..9} {10..31} ; do
             echo $year$month$day$page
             wget paper.people.com.cn/rmrb/page/$year-$month/$day/$page/rmrb$year$month$day$page.pdf
           done
        done
-       #all day bigger than 10
-     for ((day=10;day<=31;day++)) 
-       do
-         for page in 01 02 03 04 05 06 07 08 09
-           do
-            echo $year$month$day$page
-            wget paper.people.com.cn/rmrb/page/$year-$month/$day/$page/rmrb$year$month$day$page.pdf
-          done
-          for ((page=10;page<=25;page++)) 
-           do
-            echo $year$month$day$page
-            wget paper.people.com.cn/rmrb/page/$year-$month/$day/$page/rmrb$year$month$day$page.pdf
-          done
-     done
    done
 done
+
 
 ```

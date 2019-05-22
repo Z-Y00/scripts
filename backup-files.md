@@ -1,5 +1,6 @@
 some commands that I usually use
 ```
+ tar --lzop -cvf  foo.tar.lzop  foo
 cat /dev/sdb6 | lzop > linux-sys-$(date -I).img.lzop 
 
 cd /foo

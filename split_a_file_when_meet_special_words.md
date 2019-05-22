@@ -18,7 +18,8 @@ for filename in *.decaf.out; do
   #then we got the number of lines
   head -n $(($break - 1)) $filename > $filename.tac;
  # echo $total; #when the total is 0, there could be wrong
-  echo $break;
+ # echo $break;
+ echo $filename
   tail -n $(($total - $break)) $filename > $filename.asm;
 done
 

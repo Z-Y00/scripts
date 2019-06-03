@@ -14,7 +14,7 @@ do
         for day in 0{1..9} {10..31} ; do
          for page in  0{1..9} {10..31} ; do
             echo $year$month$day$page
-            wget -N paper.people.com.cn/rmrb/page/$year-$month/$day/$page/rmrb$year$month$day$page.pdf
+            wget -N paper.people.com.cn/rmrb/page/$year-$month/$day/$page/rmrb$year$month$day$page.pdf -o /dev/null;    
           done
        done
    done

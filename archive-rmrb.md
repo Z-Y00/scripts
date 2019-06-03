@@ -1,7 +1,6 @@
  # Purpose
 
-As a Chinese citizen, you may always wonder if the paper have lied to us, 
-So you may wanna to archive the daily paper and glance throungh them years later, which may reveal many secrets
+As a Chinese citizen, you may wanna to archive the daily paper and glance throungh them years later, which may reveal many things
 ### a simple one
 ```
 wget -r http://paper.people.com.cn/rmrb/ -A .pdf
@@ -15,7 +14,7 @@ do
         for day in 0{1..9} {10..31} ; do
          for page in  0{1..9} {10..31} ; do
             echo $year$month$day$page
-            wget paper.people.com.cn/rmrb/page/$year-$month/$day/$page/rmrb$year$month$day$page.pdf
+            wget -N paper.people.com.cn/rmrb/page/$year-$month/$day/$page/rmrb$year$month$day$page.pdf
           done
        done
    done

@@ -13,7 +13,9 @@ do
    do
         for day in 0{1..9} {10..31} ; do
          for page in  0{1..9} {10..31} ; do
-            echo $year$month$day$page
+            echo -ne $year$month$day$page #show it in the same line
+            # only get the newer one,skip what we already get
+            # output log to /dev/null
             wget -N paper.people.com.cn/rmrb/page/$year-$month/$day/$page/rmrb$year$month$day$page.pdf -o /dev/null;    
           done
        done

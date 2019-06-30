@@ -26,3 +26,12 @@ echo 'each of these runs very slowly, I hope you are run these concurrently and 
 ./sparse_matrix_converter ../flickr.mat ML ../flickr.mtx MM
 ./sparse_matrix_converter ../youtube.mat ML ../youtube.mtx MM
 ```
+
+git clone --recursive https://github.com/Z-Y00/gunrock.git
+cd gunrock
+mkdir build && cd build
+cmake .. && make -j16
+make test
+
+wget http://sourceforge.net/projects/boost/files/boost/1.58.0/boost_1_58_0.tar.gz
+tar  -vxf ./boost_1_58_0.tar.gz

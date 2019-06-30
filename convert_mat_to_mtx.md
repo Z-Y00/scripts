@@ -21,6 +21,7 @@ make -C sparse_matrix_converter
 cd sparse_matrix_converter
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:../bebop_util:../sparse_matrix_converter
+echo 'each of these runs very slowly, I hope you are run these concurrently and using tmux'
 ./sparse_matrix_converter ../blogcatalog.mat ML ../blogcatalog.mtx MM
 ./sparse_matrix_converter ../flickr.mat ML ../flickr.mtx MM
 ./sparse_matrix_converter ../youtube.mat ML ../youtube.mtx MM

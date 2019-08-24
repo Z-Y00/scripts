@@ -9,4 +9,8 @@ https://stackoverflow.com/a/18776339/
 https://sourceware.org/gdb/onlinedocs/gdb/Backtrace.html
 
 
-In a multi-threaded program, GDB by default shows the backtrace only for the current thread. To display the backtrace for several or all of the threads, use the command thread apply (see thread apply). For example, if you type thread apply all backtrace, GDB will display the backtrace for all the threads; this is handy when you debug a core dump of a multi-threaded program. 
+In a multi-threaded program, GDB by default shows the backtrace only for the current thread. To display the backtrace for several or all of the threads, use the command thread apply (see thread apply). For example, if you type 
+```
+thread apply all backtrace
+```
+, GDB will display the backtrace for all the threads; this is handy when you debug a core dump of a multi-threaded program. 

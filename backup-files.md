@@ -24,3 +24,10 @@ backup mode
       Requires GNU tar or a compatible version which accepts the
       '--use-compress-program=XXX' option.
 
+# all tar common usage
+```
+tar -zcvf tar-archive-name.tar.gz source-folder-name
+tar -zxvf tar-archive-name.tar.gz
+tar -xvjf foo.tar.bz2
+
+```

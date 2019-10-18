@@ -1,0 +1,32 @@
+```
+
+clush -w  nerv[1-16] ps aux | grep yoo
+
+watch -n10 squeue
+
+
+squeue -l -a -o %M%o
+
+scancel
+
+salloc -N 1 -t 101:00:00
+
+```
+
+credits to youwei  for his scripts
+
+```python
+        slurm_config = '''#!/bin/bash
+#SBATCH -J %s
+#SBATCH -D /home/yoo/SGraph/GraphP/run/%s
+#SBATCH -o zsim.stdout
+#SBATCH -e zsim.stderr
+srun /home/youwei/hmc-zsim/build/opt/zsim run.cfg
+''' % (run_id, dir_name)
+        slurm_submit_name = "%s/run.submit" % dir_name
+        with open(slurm_submit_name, "w") as file:
+          file.writelines(slurm_config)
+        slurm_submit_cmd = "sbatch %s" % slurm_submit_name
+        print slurm_submit_cmd
+        ret = subprocess.call(slurm_submit_cmd, shell=True)
+```

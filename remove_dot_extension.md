@@ -1,10 +1,7 @@
 ```
-#!/bin/sh
-echo $1
-./uconvert $1 ;
-#delete the .txt
-name=$(echo "$1" | cut -f 1 -d '.')
+#!/bin/bash
+org=$1
+name="${org%.txt}u"
 echo $name
-./dump $name;
-./zero $name;
+echo $org
 ```

@@ -14,3 +14,11 @@ In a multi-threaded program, GDB by default shows the backtrace only for the cur
 thread apply all backtrace
 ```
 , GDB will display the backtrace for all the threads; this is handy when you debug a core dump of a multi-threaded program. 
+
+
+
+info variables  "All global and static variable names".
+
+info locals   "Local variables of current stack frame" (names and values), including static variables in that function.
+
+info args   "Arguments of the current stack frame" (names and values).

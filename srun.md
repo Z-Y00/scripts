@@ -7,6 +7,8 @@ watch -n10 squeue
 
 squeue -l -a -o %M%o
 
+watch -n10 ' squeue -l -a  -o "%.18i %.9P %.8j %.8u %.8T %.10M %.9l %.6D %R     %o" ' 
+
 scancel
 
 salloc -N 1 -t 101:00:00

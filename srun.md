@@ -13,6 +13,9 @@ scancel
 
 salloc -N 1 -t 101:00:00
 
+  scontrol update JobId=561,562,563 Priority=2
+  
+
 ```
 
 credits to youwei  for his scripts

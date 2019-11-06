@@ -1,4 +1,18 @@
- # split a file when meet a special line
+# delete lines from
+https://www.folkstalk.com/2013/03/sed-remove-lines-file-unix-examples.html
+
+```
+7. Delete lines other than the specified range
+
+> sed '2,4!d' file
+unix
+fedora
+debian
+
+
+Here the sed command removes lines other than 2nd, 3rd and 4th. 
+```
+# split a file when meet a special line
  here, we split the file ./z.decaf.out with the ======
 ```
 

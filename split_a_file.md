@@ -1,15 +1,10 @@
 # delete lines from
 https://www.folkstalk.com/2013/03/sed-remove-lines-file-unix-examples.html
-
+https://unix.stackexchange.com/questions/45944/delete-specific-line-numbers-from-a-text-file-using-sed
 ```
 7. Delete lines other than the specified range
 
-> sed '2,4!d' file
-unix
-fedora
-debian
-
-
+> sed  -i.bak -e '2,4!d' file
 Here the sed command removes lines other than 2nd, 3rd and 4th. 
 ```
 # split a file when meet a special line

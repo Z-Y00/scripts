@@ -22,3 +22,12 @@ info variables  "All global and static variable names".
 info locals   "Local variables of current stack frame" (names and values), including static variables in that function.
 
 info args   "Arguments of the current stack frame" (names and values).
+
+
+https://stackoverflow.com/questions/3483163/how-do-i-halt-the-continuing-in-gdb
+ kill -2 
+ 
+ 
+You should interrupt the process that is attached by gdb. Do not interrupt gdb itself. Interrupt the process by either ctrl-c in the terminal in which the process was started or send the process the SIGINT by kill -2 procid. With procid the id of the process being attached.
+
+

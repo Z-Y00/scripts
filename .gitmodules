@@ -1,6 +1,6 @@
 [submodule "geotrace"]
 	path = geotrace
 	url = https://github.com/LaiJingli/geotrace.git
-[submodule "proxy"]
-	path = proxy
+[submodule "gfwlist2privoxy"]
+	path = gfwlist2privoxy
 	url = https://github.com/SAMZONG/gfwlist2privoxy.git

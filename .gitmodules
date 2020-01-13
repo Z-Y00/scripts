@@ -1,0 +1,3 @@
+[submodule "geotrace"]
+	path = geotrace
+	url = ./geotrace

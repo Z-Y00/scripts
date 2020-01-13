@@ -1,3 +1,3 @@
 [submodule "geotrace"]
 	path = geotrace
-	url = ../geotrace
+	url = https://github.com/LaiJingli/geotrace.git

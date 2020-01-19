@@ -1,0 +1,2 @@
+
+wget -r  -A *.jpg

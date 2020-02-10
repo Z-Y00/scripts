@@ -4,3 +4,6 @@
 [submodule "gfwlist2privoxy"]
 	path = gfwlist2privoxy
 	url = https://github.com/SAMZONG/gfwlist2privoxy.git
+[submodule "douban_crawler"]
+	path = douban_crawler
+	url = https://github.com/JimSunJing/douban_crawler.git

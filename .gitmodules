@@ -7,3 +7,6 @@
 [submodule "douban_crawler"]
 	path = douban_crawler
 	url = https://github.com/JimSunJing/douban_crawler.git
+[submodule "noise"]
+	path = noise
+	url = git@github.com:Z-Y00/make_noise.git

@@ -49,3 +49,12 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 
 https://gist.github.com/laispace/666dd7b27e9116faece6
+
+# pip
+https://blog.csdn.net/qq_34067821/article/details/90721254
+mkdir ~/.pip
+echo "[global]
+index-url = http://mirrors.aliyun.com/pypi/simple/
+ 
+[install]
+trusted-host=mirrors.aliyun.com" >~/.pip/pip.conf

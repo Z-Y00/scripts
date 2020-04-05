@@ -34,3 +34,8 @@ chmod +x for all *.sh in a git repo
 ```
 find . -name '*sh' -exec git update-index --chmod=+x {} \;
 ```
+# fast git clone
+git clone https://github.com/2019ncovmemory/nCovMemory.git --depth 1
+
+# untrack a file
+

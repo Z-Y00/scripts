@@ -31,3 +31,30 @@ https://stackoverflow.com/questions/3483163/how-do-i-halt-the-continuing-in-gdb
 You should interrupt the process that is attached by gdb. Do not interrupt gdb itself. Interrupt the process by either ctrl-c in the terminal in which the process was started or send the process the SIGINT by kill -2 procid. With procid the id of the process being attached.
 
 
+
+
+
+
+
+In addition to options mentioned by @diverscuba23, you could do the following:
+
+gdb -ex=r --args bash <script>
+
+(assuming it's a bash script. Else adapt accordingly)
+https://stackoverflow.com/a/32264100/8428146
+
+
+
+
+You can always Python using gdb and set breakpoints as you like
+
+gdb -ex r --args python script.py args
+
+If you want to look what happens in Python while running Python script I suggest to use mixed mode
+
+gdb -ex r --args python -m pdb script.py
+
+This way, you can break in pdb, then press Ctrl-C and end up inside gdb. Then, bt will give you stack trace inside Python.
+
+
+https://stackoverflow.com/a/51553546/8428146

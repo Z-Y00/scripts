@@ -24,3 +24,18 @@ wget -r  -A *.jpg
 -p：下载页面所需所有资源，如图片、声音等
 
 -k：将下载内容中的链接转换为本地连接
+
+
+
+wget \
+     --recursive \
+     --no-clobber \
+     --page-requisites \
+     --html-extension \
+     --convert-links \
+     --restrict-file-names=windows \
+     --domains carrotlsp.github.io \
+     --no-parent \
+     
+https://blog.csdn.net/roshy/article/details/90640849
+https://www.jianshu.com/p/7da33ba4410b

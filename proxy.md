@@ -5,6 +5,14 @@ apt install netcat-openbsd
 
 https://www.linuxquestions.org/questions/linux-newbie-8/how-to-sftp-using-a-socks-v5-proxy-789824/
 ```
+
+man page
+```
+     -X proxy_protocol
+             Use proxy_protocol when talking to the proxy server.  Supported protocols are 4 (SOCKS v.4), 5 (SOCKS v.5) and connect (HTTPS proxy).  If the protocol
+             is not specified, SOCKS version 5 is used.
+
+```
 # curl
 ```
 curl ipinfo.io
@@ -27,7 +35,7 @@ https://stackoverflow.com/a/19162114/8428146
 
 
 Host foobar.example.com
-    ProxyCommand          nc -X connect -x 127.0.0.1:1080 %h %p
+    ProxyCommand          nc -X connect ``` or 4/5 depends on your tunnel ``` -x 127.0.0.1:1080 %h %p
     ServerAliveInterval   10
 
 

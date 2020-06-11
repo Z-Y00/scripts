@@ -6,7 +6,22 @@ GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_example" git clone example
 ```
 working for me:
 ```
-git config core.sshCommand "ssh -i ~/.ssh/id_rsa_example -F /dev/null"
+git config core.sshCommand "ssh -i ~/.ssh/alchem_rgy -F /dev/null"
+git config core.sshCommand "ssh -i ~/.ssh/id_rsa -F /dev/null"
+ 
+```
+or to change the ~/.ssh/config
+```
+      ProxyCommand          nc -X 5 -x 127.0.0.1:1080 %h %p
+#Host github.com
+#   ServerAliveInterval   10
+#   IdentityFile ~/.ssh/alchem_rgy
+#   User git 
+
+```
+for ssh key debugging
+```
+ssh git@github.com -v
 ```
 https://superuser.com/a/912281/759206
 # clean up git

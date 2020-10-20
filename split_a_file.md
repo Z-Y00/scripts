@@ -33,3 +33,19 @@ for filename in *.decaf.out; do
 done
 
 ```
+
+
+# string in bash
+If x is constant, the following parameter expansion performs substring extraction:
+
+b=${a:12:5}
+
+where 12 is the offset (zero-based) and 5 is the length
+
+If the underscores around the digits are the only ones in the input, you can strip off the prefix and suffix (respectively) in two steps:
+
+tmp=${a#*_}   # remove prefix ending in "_"
+b=${tmp%_*}   # remove suffix starting with "_"
+
+https://stackoverflow.com/questions/428109/extract-substring-in-bash
+

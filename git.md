@@ -6,8 +6,7 @@ GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_example" git clone example
 ```
 working for me:
 ```
-git config core.sshCommand "ssh -i ~/.ssh/alchem_rgy -F /dev/null"
-git config core.sshCommand "ssh -i ~/.ssh/id_rsa -F /dev/null"
+git config core.sshCommand "ssh -i ~/xxx -F /dev/null"
  
 ```
 or to change the ~/.ssh/config
@@ -54,3 +53,54 @@ git clone https://github.com/2019ncovmemory/nCovMemory.git --depth 1
 
 # untrack a file
 
+# ProxyCommand
+git -c http.proxy=socks5h://localhost:1080  push xxx
+just add the -c http.proxy=socks5h://localhost:1080 to whatever the command is
+
+git -c http.proxy=socks5h://localhost:1080 clone https://git.overleaf.com/xxxx
+
+
+# Force git to use SSH on GitHub
+https://ricostacruz.com/til/github-always-ssh
+This forces GitHub to always use SSH, even for HTTPS URL's! This way, you can use https:// GitHub URL's and they will still use your SSH key.
+
+git config --global url."git@github.com:".insteadOf "https://github.com/"
+
+# parallel git clone
+https://stackoverflow.com/a/4438292/8428146
+
+With version 2.13 of Git and later, --recurse-submodules can be used instead of --recursive:
+
+git clone --recurse-submodules -j8 git://github.com/foo/bar.git
+cd bar
+
+For already cloned repos, or older Git versions, use:
+
+git clone git://github.com/foo/bar.git
+cd bar
+git submodule update --init --recursive
+
+
+# cache credential
+
+ git config --global credential.helper store
+
+ then do git pull, and it will store your credential 
+ https://stackoverflow.com/a/35942890/8428146
+ 
+ 
+https://medium.com/@jamomani/work-on-overleaf-projects-offline-420fc16ca31b
+```
+main.aux
+main.log
+main.out
+main.pdf
+main.toc
+main.xmpdata
+pdfa.xmpi
+main.bbl
+main.blg
+```
+Now, if you want to avoid inserting username and password every time you push the changes to Overleaf, use the command below, otherwise ship to “push the changes” part. The timeout option specifies for how long in milliseconds the credentials are stored, in this example it corresponds to 6 months. Be aware that the credentials are stored in a plaintext file in ~/.git-credentials.
+
+git config --global credential.helper ‘cache --timeout 15552000000’

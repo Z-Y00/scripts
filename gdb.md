@@ -60,3 +60,10 @@ This way, you can break in pdb, then press Ctrl-C and end up inside gdb. Then, b
 https://stackoverflow.com/a/51553546/8428146
 
 
+https://codeyarns.github.io/tech/2019-12-30-how-to-generate-assembly-code-using-gcc.html
+
+```
+Thankfully, all these options can be combined to generate the most detailed annotated assembly code:
+
+$ gcc -g -Wa,-adhln -fverbose-asm foobar.cpp > foobar.s
+```

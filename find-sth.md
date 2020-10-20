@@ -20,3 +20,9 @@ if [ "$#" -ne 3 ] || ! [ -d "$1" ]; then
 fi
 find $1 -name $2 -print | xargs grep $3
 ```
+
+This will delete all the files in a directory (and below) that are size zero.
+
+find /tmp -size  0 -print -delete
+
+https://stackoverflow.com/questions/5475905/linux-delete-file-with-size-0

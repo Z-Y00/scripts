@@ -11,6 +11,11 @@ watch -n10 ' squeue -l -a  -o "%.18i %.9P %.8j %.8u %.8T %.10M %.9l %.6D %R     
 
 scancel
 
+#if you launch a lot lot of tasks
+scancel --state=PENDING
+#if you took other's node
+scancel --nodelist=nerv1,nerv2,nerv3
+
 salloc -N 1 -t 101:00:00
 
   scontrol update JobId=561,562,563 Priority=2

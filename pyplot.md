@@ -7,6 +7,9 @@ https://matplotlib.org/stable/tutorials/introductory/customizing.html?highlight=
 log scale on y
 https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.yscale.html
 
+if your tick is too long, use \n to break the xticks
+
+names = ["C\nA","C","E","F","G","L","P","E\nX","G\nR","T","R"]
 
 subplot adjust
 wspace = 0.2

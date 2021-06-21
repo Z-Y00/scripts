@@ -8,6 +8,7 @@ log scale on y
 https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.yscale.html
 
 wished precision on the y axis
+also https://matplotlib.org/stable/gallery/ticks_and_spines/tick-formatters.html
 ```
 import matplotlib.pyplot as plt
 import numpy as np

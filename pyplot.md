@@ -7,6 +7,14 @@ https://matplotlib.org/stable/tutorials/introductory/customizing.html?highlight=
 log scale on y
 https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.yscale.html
 
+
+subplot adjust
+wspace = 0.2
+plt.subplots_adjust(right = 2 )
+plt.subplots_adjust(wspace = 0.5 )
+https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.subplots_adjust.html
+
+
 wished precision on the y axis
 also https://matplotlib.org/stable/gallery/ticks_and_spines/tick-formatters.html
 ```

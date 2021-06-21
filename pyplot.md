@@ -17,6 +17,8 @@ plt.subplots_adjust(right = 2 )
 plt.subplots_adjust(wspace = 0.5 )
 https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.subplots_adjust.html
 
+config bar width
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html
 
 wished precision on the y axis
 also https://matplotlib.org/stable/gallery/ticks_and_spines/tick-formatters.html

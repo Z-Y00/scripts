@@ -3,6 +3,13 @@ https://stackoverflow.com/a/40909660/8428146
 
 legend.labelspacing , better control the legend
 https://matplotlib.org/stable/tutorials/introductory/customizing.html?highlight=legend.labelspacing#a-sample-matplotlibrc-file
+```
+params = {
+          'legend.labelspacing':  0.2 ,
+          'legend.handlelength':  0.5,
+          'legend.fancybox': false,
+          
+```
 
 log scale on y
 https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.yscale.html

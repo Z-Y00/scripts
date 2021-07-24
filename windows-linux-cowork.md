@@ -11,3 +11,7 @@ git rm --cached -r .         # Don’t forget the dot at the end
 
 git reset --hard
 ```
+
+# vscode sync key mapping
+https://stackoverflow.com/questions/52726849/how-to-transfer-vscode-key-mapping-on-windows-to-ubuntu
+https://marketplace.visualstudio.com/items?itemName=fredhappyface.linuxkeybindings

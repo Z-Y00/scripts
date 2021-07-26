@@ -15,3 +15,7 @@ git reset --hard
 # vscode sync key mapping
 https://stackoverflow.com/questions/52726849/how-to-transfer-vscode-key-mapping-on-windows-to-ubuntu
 https://marketplace.visualstudio.com/items?itemName=fredhappyface.linuxkeybindings
+
+
+# sync with oneDrive
+https://github.com/abraunegg/onedrive/blob/master/docs/USAGE.md#show-your-configuration

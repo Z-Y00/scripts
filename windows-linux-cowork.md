@@ -22,6 +22,7 @@ https://github.com/abraunegg/onedrive/blob/master/docs/USAGE.md#show-your-config
 
 
 # WSL mount disk
-mount -t drvfs e: /mnt/e -o uid=1000,gid=1000
+mount -t drvfs d: /mnt/d -o uid=1000,gid=1000
+
 https://github.com/microsoft/WSL/issues/3187#issuecomment-388904048
 https://superuser.com/questions/1360276/cannot-access-external-drive-in-windows-10-linux-subsystem-bash

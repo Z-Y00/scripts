@@ -8,6 +8,7 @@ watch -n10 squeue
 squeue -l -a -o %M%o
 
 watch -n10 ' squeue -l -a  -o "%.18i %.9P %.8j %.8u %.8T %.10M %.9l %.6D %R     %o" ' 
+watch -n10 ' squeue -l -a  -o "%.8i %.4P %.8j %.5u %.8T %.10M %.4D %R     %o" | grep RUN' 
 
 scancel
 

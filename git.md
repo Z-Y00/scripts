@@ -59,6 +59,11 @@ just add the -c http.proxy=socks5h://localhost:1080 to whatever the command is
 
 git -c http.proxy=socks5h://localhost:1080 clone https://git.overleaf.com/xxxx
 
+# unset proxy
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+git config --global --unset core.gitproxy
+https://askubuntu.com/questions/838856/how-to-remove-proxy-from-git-i-try-but-still-showing-the-error-how-to-resolve-i
 
 # Force git to use SSH on GitHub
 https://ricostacruz.com/til/github-always-ssh

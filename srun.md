@@ -1,4 +1,8 @@
+
 ```
+# discovery
+get the xeon-6130
+salloc --time=1:00:00 -N 1 --exclusive  --partition=gpu  --cpus-per-task=32
 
 clush -w  nerv[1-16] ps aux | grep yoo
 

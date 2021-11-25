@@ -1,6 +1,8 @@
  ```
  subprocess.call("rm -rf graph*", shell=True)
 
+from collections import defaultdict
+
 def nested_dict(n, type):
     if n == 1:
         return defaultdict(type)

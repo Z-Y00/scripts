@@ -9,6 +9,10 @@ https://stackoverflow.com/a/18776339/
 https://sourceware.org/gdb/onlinedocs/gdb/Backtrace.html
 
 
+# debug segv
+gcc -g -fsanitize=address main.c
+https://stackoverflow.com/a/56090796/8428146
+
 In a multi-threaded program, GDB by default shows the backtrace only for the current thread. To display the backtrace for several or all of the threads, use the command thread apply (see thread apply). For example, if you type 
 ```
 thread apply all backtrace

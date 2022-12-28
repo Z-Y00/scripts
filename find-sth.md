@@ -1,3 +1,6 @@
+## search for code in a folder
+grep --include=\*.{c,h,cc,cpp,hpp} -rnw . -e "OrtKernelInfo" > log.txt
+
 ## scripts for find sth 
 You can put these scripts with shortname under your /home/foo/bin
 

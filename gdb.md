@@ -8,6 +8,13 @@ https://stackoverflow.com/a/18776339/
 
 https://sourceware.org/gdb/onlinedocs/gdb/Backtrace.html
 
+# segv addr
+
+you can examine the $_siginfo structure that is filled out when the signal occurs, and determine the faulting address:
+
+(gdb) p $_siginfo._sifields._sigfault.si_addr
+
+https://stackoverflow.com/a/3003433/8428146
 
 # debug segv
 gcc -g -fsanitize=address main.c

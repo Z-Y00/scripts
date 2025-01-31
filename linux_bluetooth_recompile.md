@@ -20,10 +20,10 @@ sudo apt install linux-source
 
 After installation, the source code will be located in the `/usr/src/linux-source-<version>.tar.xz`.
 ## Step 2: Extract Bluetooth Driver Files
-We do not need to recompile the entire kernel, but only need to modify and compile the Bluetooth-related driver files. We only need to get the Bluetooth driver directory drivers/bluetooth and extract the necessary parts.
+We do not need to recompile the entire kernel, but only need to modify and compile the Bluetooth-related driver files. We only need to get the Bluetooth driver directory drivers/bluetooth and extract the necessary parts. Here you can modify the code and apply your patch. Since the kernel code evolve very fast, which can lead to patch failure, you may need to edit the code manually and try to understand the difference.
 
 ## Step 3: Compile the Bluetooth Driver Module
-Once you have obtained and prepared the source code for the Bluetooth driver, you can compile it. Use the make command to compile the specified kernel module.
+Once you have obtained and prepared the source code for the Bluetooth driver, you can compile it under the bluetooth folder. Use the make command to compile the specified kernel module.
 
 ```bash
 make -C /lib/modules/$(uname -r)/build M=$(pwd) modules CONFIG_BT_HCIBTUSB=m
@@ -79,11 +79,11 @@ sudo apt install linux-source
 
 ## 步骤 2：提取蓝牙驱动文件
 
-我们不需要重新编译整个内核，而是只需要修改和编译蓝牙相关的驱动文件。 `drivers/bluetooth`。
+我们不需要重新编译整个内核，而是只需要修改和编译蓝牙相关的驱动文件。 `drivers/bluetooth`。 你可以在这步修改源代码， apply 上 patch
 
 ## 步骤 3：编译蓝牙驱动模块
 
-一旦你获取并准备好蓝牙驱动的源代码，你可以编译它。使用 `make` 命令来编译指定的内核模块。
+一旦你获取并准备好蓝牙驱动的源代码，你可以在 bluetooth 目录下编译它。使用 `make` 命令来编译指定的内核模块。
 
 ```bash
 make -C /lib/modules/$(uname -r)/build M=$(pwd) modules CONFIG_BT_HCIBTUSB=m
